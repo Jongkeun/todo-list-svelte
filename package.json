@@ -20,5 +20,5 @@
     "deploy": "gh-pages -d public",
     "predeploy": "npm run build"
   },
-  "homepage": "https://jongkeun.github.io/timeline-svelte"
+  "homepage": "https://jongkeun.github.io/todo-list-svelte"
 }
