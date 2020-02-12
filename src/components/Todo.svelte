@@ -3,6 +3,10 @@
   import Delete from "./Delete";
 
   export let todo;
+
+  const onClick = function(e) {
+    console.log("click");
+  };
 </script>
 
 <style>
@@ -22,5 +26,5 @@
 
 <div>
   <Checkbox {todo} />
-  <Delete />
+  <Delete {onClick} />
 </div>

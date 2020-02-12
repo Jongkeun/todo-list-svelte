@@ -3,12 +3,20 @@
   import Title from "../components/Title";
   import TodoInputBox from "../components/TodoInputBox";
 
-  let todos = [
-    { id: 1, content: "Hello1" },
-    { id: 2, content: "Hello2" },
-    { id: 3, content: "Hello3" },
-    { id: 4, content: "Hello4" }
-  ];
+  let todos = [];
+
+  const generateID = () => {
+    return (
+      "_" +
+      Math.random()
+        .toString(36)
+        .substr(2, 9)
+    );
+  };
+
+  const addTodo = content => {
+    todos = todos.concat({ id: generateID(), isDone: false, content: content });
+  };
 </script>
 
 <style>
@@ -25,7 +33,7 @@
 
 <main>
   <Title />
-  <TodoInputBox />
+  <TodoInputBox {addTodo} />
   {#each todos as todo}
     <Todo {todo} />
   {/each}
