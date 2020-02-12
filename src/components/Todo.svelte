@@ -3,9 +3,10 @@
   import Delete from "./Delete";
 
   export let todo;
+  export let deleteTodo;
 
   const onClick = function(e) {
-    console.log("click");
+    deleteTodo(todo.id);
   };
 </script>
 

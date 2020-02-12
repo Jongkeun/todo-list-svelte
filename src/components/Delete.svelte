@@ -10,6 +10,7 @@
     color: white;
     font-size: 30px;
     margin-left: auto;
+    cursor: pointer;
   }
 </style>
 

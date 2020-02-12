@@ -17,6 +17,10 @@
   const addTodo = content => {
     todos = todos.concat({ id: generateID(), isDone: false, content: content });
   };
+
+  const deleteTodo = id => {
+    todos = todos.filter(element => element.id !== id);
+  };
 </script>
 
 <style>
@@ -35,7 +39,7 @@
   <Title />
   <TodoInputBox {addTodo} />
   {#each todos as todo}
-    <Todo {todo} />
+    <Todo {todo} {deleteTodo} />
   {/each}
 
 </main>
