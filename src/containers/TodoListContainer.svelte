@@ -21,6 +21,15 @@
   const deleteTodo = id => {
     todos = todos.filter(element => element.id !== id);
   };
+
+  const updateTodo = id => {
+    todos = todos.map(element => {
+      if (element.id === id) {
+        element.isDone = !element.isDone;
+      }
+      return element;
+    });
+  };
 </script>
 
 <style>
@@ -39,7 +48,7 @@
   <Title />
   <TodoInputBox {addTodo} />
   {#each todos as todo}
-    <Todo {todo} {deleteTodo} />
+    <Todo {todo} {deleteTodo} {updateTodo} />
   {/each}
 
 </main>

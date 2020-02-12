@@ -1,5 +1,7 @@
 <script>
-  export let todo;
+  export let content;
+  export let onClick;
+  export let checked;
 </script>
 
 <style>
@@ -9,6 +11,10 @@
     vertical-align: text-top;
     position: relative;
     cursor: pointer;
+  }
+
+  label.checked {
+    text-decoration: line-through;
   }
 
   label:focus > span {
@@ -55,8 +61,8 @@
   }
 </style>
 
-<label>
-  {todo.content}
-  <input type="checkbox" class="checkbox" />
+<label class:checked>
+  {content}
+  <input type="checkbox" class="checkbox" on:click={onClick} {checked} />
   <span />
 </label>

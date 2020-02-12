@@ -4,9 +4,14 @@
 
   export let todo;
   export let deleteTodo;
+  export let updateTodo;
 
-  const onClick = function(e) {
+  const deleteClick = function(e) {
     deleteTodo(todo.id);
+  };
+
+  const updateClick = () => {
+    updateTodo(todo.id);
   };
 </script>
 
@@ -26,6 +31,9 @@
 </style>
 
 <div>
-  <Checkbox {todo} />
-  <Delete {onClick} />
+  <Checkbox
+    content={todo.content}
+    onClick={updateClick}
+    checked={todo.isDone} />
+  <Delete onClick={deleteClick} />
 </div>
