@@ -1,9 +1,19 @@
 <script>
+  import { onMount, afterUpdate } from "svelte";
   import Todo from "../components/Todo";
   import Title from "../components/Title";
   import TodoInputBox from "../components/TodoInputBox";
+  import { setStorage, getStorage } from "../utils/storage.js";
 
   let todos = [];
+
+  onMount(() => {
+    todos = JSON.parse(getStorage("todos")) || [];
+  });
+
+  afterUpdate(() => {
+    setStorage("todos", JSON.stringify(todos));
+  });
 
   const generateID = () => {
     return (
