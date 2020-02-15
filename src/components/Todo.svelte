@@ -18,10 +18,10 @@
 <style>
   div {
     display: flex;
-    height: 100px;
+    height: 40px;
     width: 90%;
     margin: 4px 0;
-    font-size: 2.5em;
+    font-size: 2em;
     color: white;
     text-align: center;
     border-radius: 30px;
