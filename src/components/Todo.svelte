@@ -18,7 +18,7 @@
 <style>
   div {
     display: flex;
-    height: 100px;
+    height: 1.5em;
     width: 90%;
     margin: 4px 0;
     font-size: 2.5em;

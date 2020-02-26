@@ -6,7 +6,7 @@
 
 <style>
   label {
-    padding: 15px 30px;
+    padding: 0 30px;
     padding-left: 40px;
     vertical-align: text-top;
     position: relative;
@@ -37,7 +37,7 @@
 
   span {
     position: absolute;
-    top: 32px;
+    top: 16px;
     left: 3px;
     height: 25px;
     width: 25px;
