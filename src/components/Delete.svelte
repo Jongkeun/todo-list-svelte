@@ -4,6 +4,7 @@
 
 <style>
   button {
+    padding: 0 10px 0 0;
     float: right;
     background-color: transparent;
     border-width: 0;
