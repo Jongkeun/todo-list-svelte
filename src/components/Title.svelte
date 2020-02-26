@@ -2,7 +2,7 @@
   div {
     display: block;
     float: left;
-    font-size: 100px;
+    font-size: 10vh;
     font-weight: 100;
     text-align: center;
     text-rendering: optimizelegibility;
